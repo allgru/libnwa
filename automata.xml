@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NestedWordAutomata>
+    <NestedWordAutomaton>
+        <Name>opentags</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q1</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p0</p0>
+            <HierarchyStates>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p1</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet>
+            <Symbol type="1">&lt;</Symbol>
+        </Alphabet>
+        <Transitions>
+            <CallTransitions>
+                <CallTransition name="call" p="p1" sourceq="q0" targetq="q1">&lt;</CallTransition>
+                <CallTransition name="callq1" p="p1" sourceq="q1" targetq="q1">&lt;</CallTransition>
+            </CallTransitions>
+            <ReturnTransitions/>
+            <InternalTransitions/>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>closetags</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q1</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p0</p0>
+            <HierarchyStates>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p1</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet/>
+        <Transitions>
+            <CallTransitions/>
+            <ReturnTransitions>
+                <ReturnTransition name="closeq0q1" p="p0" sourceq="q0" targetq="q1">&gt;</ReturnTransition>
+                <ReturnTransition name="closeq1p0" p="p0" sourceq="q1" targetq="q1">&gt;</ReturnTransition>
+                <ReturnTransition name="closeq1p1" p="p1" sourceq="q1" targetq="q1">&gt;</ReturnTransition>
+            </ReturnTransitions>
+            <InternalTransitions/>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>openclosetags</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q1</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p0</p0>
+            <HierarchyStates>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p1</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet>
+            <Symbol type="1">&lt;</Symbol>
+            <Symbol type="2">&gt;</Symbol>
+        </Alphabet>
+        <Transitions>
+            <CallTransitions>
+                <CallTransition name="openq0q1" p="p1" sourceq="q0" targetq="q1">&lt;</CallTransition>
+                <CallTransition name="openq1q1" p="p1" sourceq="q1" targetq="q1">&lt;</CallTransition>
+            </CallTransitions>
+            <ReturnTransitions>
+                <ReturnTransition name="retrunq1" p="p1" sourceq="q1" targetq="q1">&gt;</ReturnTransition>
+            </ReturnTransitions>
+            <InternalTransitions/>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>internals</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q1</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p0</p0>
+            <HierarchyStates>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p1</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet/>
+        <Transitions>
+            <CallTransitions/>
+            <ReturnTransitions/>
+            <InternalTransitions>
+                <InternalTransition name="internalq0" sourceq="q0" targetq="q1">a</InternalTransition>
+                <InternalTransition name="internalq1" sourceq="q1" targetq="q1">a</InternalTransition>
+            </InternalTransitions>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>leer</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+                <LinearState>q2</LinearState>
+                <LinearState>q3</LinearState>
+                <LinearState>q3</LinearState>
+                <LinearState>q4</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q4</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p0</p0>
+            <HierarchyStates>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p0</HierarchyAcceptingState>
+                <HierarchyAcceptingState>p1</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet/>
+        <Transitions>
+            <CallTransitions>
+                <CallTransition name="callq0q2" p="p1" sourceq="q0" targetq="q2">&lt;</CallTransition>
+            </CallTransitions>
+            <ReturnTransitions/>
+            <InternalTransitions>
+                <InternalTransition name="internalq0q1" sourceq="q0" targetq="q1">a</InternalTransition>
+                <InternalTransition name="internalq1q2" sourceq="q1" targetq="q2">b</InternalTransition>
+                <InternalTransition name="internalq2q0" sourceq="q2" targetq="q0">b</InternalTransition>
+                <InternalTransition name="internalq2q0" sourceq="q2" targetq="q0">a</InternalTransition>
+                <InternalTransition name="internalq3q4" sourceq="q3" targetq="q4">c</InternalTransition>
+            </InternalTransitions>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>alurp12</Name>
+        <Type>CommonNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>q0</LinearState>
+                <LinearState>q1</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>q0</LinearAcceptingState>
+                <LinearAcceptingState>q1</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>q0</q0>
+            <p0>p</p0>
+            <HierarchyStates>
+                <HierarchyState>p</HierarchyState>
+                <HierarchyState>p0</HierarchyState>
+                <HierarchyState>p1</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>p</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet>
+            <Symbol type="1">&lt;1</Symbol>
+            <Symbol type="1">&lt;0</Symbol>
+            <Symbol type="2">1&gt;</Symbol>
+            <Symbol type="2">0&gt;</Symbol>
+            <Symbol type="0">1</Symbol>
+            <Symbol type="0">0</Symbol>
+        </Alphabet>
+        <Transitions>
+            <CallTransitions>
+                <CallTransition name="q0&lt;1p0" p="p0" sourceq="q0" targetq="q0">&lt;1</CallTransition>
+                <CallTransition name="q0q1&lt;0p0" p="p0" sourceq="q0" targetq="q1">&lt;0</CallTransition>
+                <CallTransition name="q1&lt;0p1" p="p1" sourceq="q1" targetq="q1">&lt;0</CallTransition>
+                <CallTransition name="q0q1&lt;1p1" p="p1" sourceq="q1" targetq="q0">&lt;1</CallTransition>
+            </CallTransitions>
+            <ReturnTransitions>
+                <ReturnTransition name="q01&lt;p0" p="p0" sourceq="q0" targetq="q0">1&gt;</ReturnTransition>
+                <ReturnTransition name="q01&gt;p" p="p" sourceq="q0" targetq="q0">1&gt;</ReturnTransition>
+                <ReturnTransition name="q0q11&gt;p1" p="p1" sourceq="q0" targetq="q1">1&gt;</ReturnTransition>
+                <ReturnTransition name="q10&gt;p1" p="p1" sourceq="q1" targetq="q1">0&gt;</ReturnTransition>
+                <ReturnTransition name="q11&gt;p" p="p" sourceq="q1" targetq="q1">1&gt;</ReturnTransition>
+                <ReturnTransition name="q0q10&gt;p0" p="p0" sourceq="q1" targetq="q0">0&gt;</ReturnTransition>
+                <ReturnTransition name="q0q10&gt;p" p="p" sourceq="q1" targetq="q0">0&gt;</ReturnTransition>
+            </ReturnTransitions>
+            <InternalTransitions>
+                <InternalTransition name="q01" sourceq="q0" targetq="q0">1</InternalTransition>
+                <InternalTransition name="q0q10" sourceq="q0" targetq="q1">0</InternalTransition>
+                <InternalTransition name="q11" sourceq="q1" targetq="q1">1</InternalTransition>
+                <InternalTransition name="q0q10" sourceq="q1" targetq="q0">0</InternalTransition>
+            </InternalTransitions>
+        </Transitions>
+    </NestedWordAutomaton>
+    <NestedWordAutomaton>
+        <Name>leerLNWA</Name>
+        <Type>LinearAcceptingNestedWordAutomaton</Type>
+        <States>
+            <LinearStates>
+                <LinearState>(q0,0)</LinearState>
+                <LinearState>(q0,1)</LinearState>
+                <LinearState>(q1,0)</LinearState>
+                <LinearState>(q1,1)</LinearState>
+                <LinearState>(q2,0)</LinearState>
+                <LinearState>(q2,1)</LinearState>
+                <LinearState>(q3,0)</LinearState>
+                <LinearState>(q3,1)</LinearState>
+                <LinearState>(q4,0)</LinearState>
+                <LinearState>(q4,1)</LinearState>
+            </LinearStates>
+            <LinearAcceptingStates>
+                <LinearAcceptingState>(q4,0)</LinearAcceptingState>
+            </LinearAcceptingStates>
+            <q0>(q0,0)</q0>
+            <p0>(p0,0)</p0>
+            <HierarchyStates>
+                <HierarchyState>(p0,0)</HierarchyState>
+                <HierarchyState>(p0,1)</HierarchyState>
+                <HierarchyState>(p1,0)</HierarchyState>
+                <HierarchyState>(p1,1)</HierarchyState>
+            </HierarchyStates>
+            <HierarchyAcceptingStates>
+                <HierarchyAcceptingState>(p0,0)</HierarchyAcceptingState>
+                <HierarchyAcceptingState>(p0,1)</HierarchyAcceptingState>
+                <HierarchyAcceptingState>(p1,0)</HierarchyAcceptingState>
+                <HierarchyAcceptingState>(p1,1)</HierarchyAcceptingState>
+            </HierarchyAcceptingStates>
+        </States>
+        <Alphabet/>
+        <Transitions>
+            <CallTransitions>
+                <CallTransition name="(callq0q2,0)" p="(p1,0)" sourceq="(q0,0)" targetq="(q2,0)">&lt;</CallTransition>
+                <CallTransition name="(callq0q2,1)" p="(p1,1)" sourceq="(q0,1)" targetq="(q2,1)">&lt;</CallTransition>
+            </CallTransitions>
+            <ReturnTransitions/>
+            <InternalTransitions>
+                <InternalTransition name="(internalq0q1,0)" sourceq="(q0,0)" targetq="(q1,0)">a</InternalTransition>
+                <InternalTransition name="(internalq0q1,1)" sourceq="(q0,1)" targetq="(q1,1)">a</InternalTransition>
+                <InternalTransition name="(internalq1q2,0)" sourceq="(q1,0)" targetq="(q2,0)">b</InternalTransition>
+                <InternalTransition name="(internalq1q2,1)" sourceq="(q1,1)" targetq="(q2,1)">b</InternalTransition>
+                <InternalTransition name="(internalq2q0,0)" sourceq="(q2,0)" targetq="(q0,0)">b</InternalTransition>
+                <InternalTransition name="(internalq2q0,1)" sourceq="(q2,1)" targetq="(q0,1)">b</InternalTransition>
+                <InternalTransition name="(internalq2q0,0)" sourceq="(q2,0)" targetq="(q0,0)">a</InternalTransition>
+                <InternalTransition name="(internalq2q0,1)" sourceq="(q2,1)" targetq="(q0,1)">a</InternalTransition>
+                <InternalTransition name="(internalq3q4,0)" sourceq="(q3,0)" targetq="(q4,0)">c</InternalTransition>
+                <InternalTransition name="(internalq3q4,1)" sourceq="(q3,1)" targetq="(q4,1)">c</InternalTransition>
+            </InternalTransitions>
+        </Transitions>
+    </NestedWordAutomaton>
+</NestedWordAutomata>
